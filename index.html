@@ -1,42 +1,99 @@
-export default function BirthdaySite() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 text-white overflow-hidden">
-      <section className="flex flex-col items-center justify-center text-center min-h-screen px-6 relative">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 max-w-4xl">
-          <h1 className="text-6xl md:text-8xl font-bold drop-shadow-lg animate-bounce">🎉 İYİ Kİ DOĞDUN! 🎉</h1>
-          <p className="mt-6 text-2xl md:text-3xl font-semibold">Bugün senin en özel günün!</p>
-          <p className="mt-4 text-lg md:text-xl opacity-90">Mutluluk, başarı ve bol kahkaha dolu bir yıl senin olsun 💖</p>
-          <button
-            onClick={() => document.getElementById('surprise').scrollIntoView({ behavior: 'smooth' })}
-            className="mt-10 bg-white text-pink-500 px-8 py-4 rounded-2xl text-xl font-bold shadow-2xl hover:scale-110 transition"
-          >
-            Sürprizi Gör 🎁
-          </button>
-        </div>
-      </section>
-
-      <section id="surprise" className="py-24 px-6 text-center bg-white/10 backdrop-blur-md">
-        <h2 className="text-5xl font-bold mb-10">Senin İçin Mesaj 💌</h2>
-        <div className="max-w-3xl mx-auto bg-white/20 rounded-3xl p-10 shadow-2xl text-xl leading-9">
-          Hayatına giren herkese neşe saçan, gülüşüyle ortamı aydınlatan harika bir insansın.<br/><br/>
-          Bu yeni yaşında tüm hayallerinin gerçek olması dileğiyle...<br/><br/>
-          <span className="text-3xl font-bold">İyi ki varsın! 🥳</span>
-        </div>
-      </section>
-
-      <section className="py-24 px-6 text-center">
-        <h2 className="text-5xl font-bold mb-12">Anı Galerisi 📸</h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="bg-white/20 h-64 rounded-3xl flex items-center justify-center text-2xl">Fotoğraf 1</div>
-          <div className="bg-white/20 h-64 rounded-3xl flex items-center justify-center text-2xl">Fotoğraf 2</div>
-          <div className="bg-white/20 h-64 rounded-3xl flex items-center justify-center text-2xl">Fotoğraf 3</div>
-        </div>
-      </section>
-
-      <footer className="py-10 text-center bg-black/20 text-lg">
-        Sevgiyle hazırlandı ❤️
-      </footer>
-    </div>
-  );
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umut'un Doğum Gününe Hoş Geldiniz</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Arial',sans-serif;scroll-behavior:smooth;}
+body{
+    background:linear-gradient(135deg,#ff6aa2,#b06cff,#6cbcff);
+    color:white;
+    overflow-x:hidden;
 }
+header{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+h1{
+    font-size:80px;
+    text-shadow:0 0 20px rgba(0,0,0,0.3);
+    animation:float 2s infinite;
+}
+p{
+    font-size:28px;
+    margin-top:20px;
+    max-width:900px;
+}
+.enter-btn{
+    margin-top:40px;
+    padding:20px 45px;
+    border:none;
+    border-radius:20px;
+    background:white;
+    color:#ff4f8f;
+    font-size:24px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+.enter-btn:hover{transform:scale(1.1);}
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    background:rgba(255,255,255,0.08);
+}
+.info-box{
+    background:rgba(255,255,255,0.2);
+    padding:50px;
+    border-radius:30px;
+    backdrop-filter:blur(10px);
+    max-width:900px;
+}
+.info-box h2{font-size:55px;margin-bottom:25px;}
+.info-box p{font-size:30px;line-height:1.8;}
+footer{
+    padding:30px;
+    text-align:center;
+    background:rgba(0,0,0,0.2);
+    font-size:22px;
+}
+@keyframes float{
+    0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>UMUT'UN DOĞUM GÜNÜNE HOŞ GELDİNİZ </h1>
+    <p>Siz buraya kadar geldiniz ve benim doğum günümü kutlayacaksınız. Geldiğiniz için ve hediyeler için çok teşekkürler..</p>
+    <button class="enter-btn" onclick="document.getElementById('details').scrollIntoView({behavior:'smooth'})">Partiye Gir 🎉</button>
+</header>
+
+<section id="details">
+    <div class="info-box">
+        <h2>🎈 Kutlama Her An Başlayabilir.🎈</h2>
+        <p>
+            Sizleri burada görmekten çok mutluyum!<br><br>
+            Bu doğum gününde yaşanacak eğlenceleri aklımdan bile geçiremiyorum.😆<br>
+        </p>
+    </div>
+</section>
+
+<footer>
+    Sevgiyle Hazırlandı ❤️ Kodu yazan: Doğum Günü Çocuğu (Umut ELİDENK)
+</footer>
+
+</body>
+</html>
